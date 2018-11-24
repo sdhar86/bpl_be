@@ -35,7 +35,8 @@ gem 'netaddr', '~> 1.5'
 gem 'twilio-ruby'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-gem 'rack-cors', '~> 0.4.0', :groups => [:development, :test]
+# gem 'rack-cors', '~> 0.4.0', :groups => [:development, :test]
+gem 'rack-cors', require: 'rack/cors'
 
 # gem 'unicorn'
 # gem 'unicorn-worker-killer'
@@ -51,6 +52,8 @@ gem 'paperclip', '~> 5.0.0'
 gem 'stripe'
 gem 'ruby-progressbar'
 gem 'rack-attack'
+gem 'omniauth'
+gem 'devise_token_auth'
 
 
 group :test do
