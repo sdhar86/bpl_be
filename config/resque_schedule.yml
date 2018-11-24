@@ -1,0 +1,19 @@
+test_job:
+  every:
+    - "30s" 
+# every 1 hours
+  queue: default
+  custom_job_class: "TestJob"
+  description: "Just for test"
+# daily_mapped_segments_spreadsheet_job:
+#   cron: "0 18 * * * America/New_York"
+#   # every evening: 6:00 pm
+#   queue: google
+#   custom_job_class: "Daily::MappedSegmentsSpreadsheetJob"
+#   description: "Review Rodrigo's spreadsheet to update all possible segments"
+# daily_process_all_organizations_job:
+#   cron: "0 19 * * * America/New_York"
+#   # every night: 7:00 pm
+#   queue: process_organization
+#   custom_job_class: "Daily::ProcessAllOrganizationsJob"
+#   description: "Process all organizations one by one"

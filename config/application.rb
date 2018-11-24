@@ -30,6 +30,8 @@ module BplRails
     config.autoload_paths += %W(#{config}/app/queries #{config.root}/lib #{config.root}/app/services #{config.root}/lib/errors)
     config.eager_load_paths += %W( #{config.root}/lib #{config.root}/lib/errors)
 
+    config.active_job.queue_adapter = :resque
+
     config.time_zone = 'Eastern Time (US & Canada)'
 
     config.active_record.belongs_to_required_by_default = true
