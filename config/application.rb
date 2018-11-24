@@ -31,5 +31,12 @@ module BplRails
     config.eager_load_paths += %W( #{config.root}/lib #{config.root}/lib/errors)
 
     config.time_zone = 'Eastern Time (US & Canada)'
+
+    config.active_record.belongs_to_required_by_default = true
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
+    end    
   end
 end
