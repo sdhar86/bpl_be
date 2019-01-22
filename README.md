@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a personal boilerplate for upcoming projects. It includes 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Authentication (Local and Third Party)
+2. Redis
+3. Resque 
+4. Email with Mailgun
+5. Services Architecture
+6. RabbitMQ
+7. Stripe Integration 
+8. Twilio Integration
