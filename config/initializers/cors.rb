@@ -5,13 +5,15 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-Rails.application.config.middleware.insert_before 0, Rack::Cors do
-  allow do
-    origins 'example.com'
-
-    resource '*',
-      headers: :any,
-      expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+if Rails.env.development?
+  Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins '*'
+      resource '*',
+               :headers => :any,
+               :expose => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+               :methods => [:get, :post, :delete, :put, :patch, :options, :head],
+               :max_age => 31536000
+    end
   end
 end

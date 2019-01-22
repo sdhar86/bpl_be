@@ -9,10 +9,7 @@ DeviseTokenAuth.setup do |config|
 
   # By default, users will need to re-authenticate after 2 weeks. This setting
   # determines how long tokens will remain valid after they are issued.
-  config.token_lifespan = 2.weeks
-
-  # where user is redirected to after successful login
-  config.default_confirm_success_url	 = 'http://google.com'
+  # config.token_lifespan = 2.weeks
 
   # Sets the max number of concurrent devices per user, which is 10 by default.
   # After this limit is reached, the oldest tokens will be removed.
